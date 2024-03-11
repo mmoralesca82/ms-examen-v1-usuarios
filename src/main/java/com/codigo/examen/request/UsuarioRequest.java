@@ -2,14 +2,15 @@ package com.codigo.examen.request;
 
 
 import jakarta.persistence.Column;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
+
 import java.util.Set;
 
 @Getter
 @Setter
 @Builder
+@AllArgsConstructor
+@NoArgsConstructor
 public class UsuarioRequest {
 
     private Long idUsuario;

@@ -102,7 +102,7 @@ public class UsuarioServiceImpl implements UsuarioService {
     }
 
 
-    private Boolean authorizedHere(Long id, String subjectFromToken){
+    public Boolean authorizedHere(Long id, String subjectFromToken){
         Set<RolEntity> roles = usuarioRepository.findByUsername(subjectFromToken).get().getRoles();
         for( RolEntity rol : roles){
             if(rol.getNombreRol().equals("ADMIN")) return true;
